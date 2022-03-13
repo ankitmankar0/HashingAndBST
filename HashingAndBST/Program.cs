@@ -10,7 +10,6 @@ namespace HashingAndBST
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("*********BINARY SEARCH TREE OPERATIONS*********");
             Console.WriteLine("1.Insertion.");
             Console.WriteLine("Enter the option!!!");
