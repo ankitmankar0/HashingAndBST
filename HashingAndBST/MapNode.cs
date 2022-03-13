@@ -47,7 +47,6 @@ namespace HashingAndBST
                 }
             }
         }
-
         public void Display()
         {
             if (this.leftTree != null)
