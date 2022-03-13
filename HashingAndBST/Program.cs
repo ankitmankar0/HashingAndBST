@@ -11,20 +11,37 @@ namespace HashingAndBST
         static void Main(string[] args)
         {
 
-            Console.WriteLine("*********BINARY SEARCH TREE OPERATIONS*********");
-            Console.WriteLine("1.Insertion.");
-            Console.WriteLine("Enter the option!!!");
+            Console.WriteLine("***Hashing Problem***");
+            Console.WriteLine("***USE CASE 1-To find frequency of words *** ");
+            Console.WriteLine("Enter the option");
             int num = Convert.ToInt32(Console.ReadLine());
-            BST<int> binarySearchTree = new BST<int>(56);
+            MapNode<string, int> myMapNode = new MapNode<string, int>(6);
             switch (num)
             {
                 case 1:
-                    binarySearchTree.Insert(30);
-                    binarySearchTree.Insert(70);
-                    binarySearchTree.Display();
+                    string[] words = { "to", "be", "or", "not", "to", "be" };
+                    int count = 1;
+                    foreach (string i in words)
+                    {
+                        count = myMapNode.CheckHash(i);
+                        if (count > 1)
+                        {
+                            myMapNode.Add(i, count);
+                        }
+                        else
+                        {
+                            myMapNode.Add(i, 1);
+                        }
+                    }
+
+                    IEnumerable<string> uniqueItems = words.Distinct<string>();
+                    foreach (var i in uniqueItems)
+                    {
+                        myMapNode.Display(i);
+                    }
                     break;
                 default:
-                    Console.WriteLine("Enter valid option!!!");
+                    Console.WriteLine("Enter the valid option!!!");
                     break;
             }
             Console.ReadLine();
