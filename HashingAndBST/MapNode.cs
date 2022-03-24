@@ -83,10 +83,6 @@ namespace HashingAndBST
             {
                 return 1;
             }
-
-        }
-        //Display Linkedlist elements for particular key
-        public void Display(K key)
         {
             int position = GetArrayPosition(key);
             LinkedList<KeyValue<K, V>> LinkedListofPosition = GetLinkedListPosition(position);
