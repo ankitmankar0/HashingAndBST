@@ -11,10 +11,6 @@ namespace HashingAndBST
         static void Main(string[] args)
         {
 
-            Console.WriteLine("***Hashing Problem***");
-            Console.WriteLine("***USE CASE 1-To find frequency of words in a sentence*** ");
-            Console.WriteLine("***USE CASE 2-To find frequency of words in a paragraph** ");
-            Console.WriteLine("Enter the option");
             int num = Convert.ToInt32(Console.ReadLine());
             MapNode<string, int> myMapNode = new MapNode<string, int>(6);
             switch (num)

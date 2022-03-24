@@ -33,26 +33,7 @@ namespace HashingAndBST
             LinkedList<KeyValue<K, V>> LinkedListofPosition = GetLinkedListPosition(position);
             KeyValue<K, V> keyValue = new KeyValue<K, V>()
             {
-                Key = key,
-                Value = value
-            };
-            LinkedListofPosition.AddLast(keyValue);
-        }
 
-        //Step 1: Get array position
-        public int GetArrayPosition(K key)
-        {
-            int hashcode = key.GetHashCode();
-            int position = hashcode % size;
-            return Math.Abs(position);
-        }
-
-        //Step 2: Create linkedlist for a particular position
-        public LinkedList<KeyValue<K, V>> GetLinkedListPosition(int position)
-        {
-            if (items[position] == null)
-            {
-                items[position] = new LinkedList<KeyValue<K, V>>();
             }
             return items[position];
         }
@@ -69,12 +50,7 @@ namespace HashingAndBST
             {
                 if (keyValue.Key.Equals(key))
                 {
-                    count = Convert.ToInt32(keyValue.Value) + 1;
-                    found = true;
-                    founditem = keyValue;
-                }
-            }
-            if (found)
+
             {
                 LinkedListofPosition.Remove(founditem);
                 return count;
